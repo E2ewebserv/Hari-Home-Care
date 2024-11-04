@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Takes full height of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  #hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+    color: #f2f2f2;
+  }
+  
+  .hero-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff6600; /* Call-to-action button color */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .hero-btn:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #hero {
+      height: 60vh; /* Reduce height on smaller screens */
+    }
+  
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  
+    .hero-btn {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #hero {
+      height: 50vh; /* Further reduce height on very small screens */
+    }
+  
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-content p {
+      font-size: 0.9rem;
+    }
+  
+    .hero-btn {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+  }
+  
+
+  #About{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #About h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  #About p{
+    text-align: justify;
+    font-size: 16px;
+    color:#ff6600;
+    font-weight: 600;
+  }
+
+
+
+/* Base Styling */
+#gallery {
+    padding: 60px 0;
+    background-color: #f7f9fc;
+  }
+  
+  #gallery h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff6600; /* Highlighted color for headings */
+    margin-bottom: 15px;
+  }
+  
+  #gallery p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Row Styling */
+  #gallery .row {
+    margin-bottom: 50px;
+  }
+  
+  #gallery .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Image Styling */
+  #gallery img {
+    border-radius: 10px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 300px; /* Restrict the image height for consistency */
+  }
+  
+  #gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Text Content Styling */
+  #gallery .col-md-6 h3 {
+    font-size: 1.5rem;
+    color: #ff6600;
+    text-align: left;
+  }
+  
+  #gallery .col-md-6 p {
+    color: #777;
+    line-height: 1.8;
+    font-size: 1rem;
+    text-align: justify;
+  }
+  
+  #gallery .col-md-6 {
+    padding: 20px;
+  }
+  
+  /* Call-to-Action Button (Optional) */
+  #gallery .gallery-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  #gallery .gallery-btn:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #gallery h3 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  
+    #gallery p {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  
+    #gallery .row {
+      flex-direction: column; /* Stack the image and content vertically */
+    }
+  
+    #gallery .col-md-6 {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #gallery h3 {
+      font-size: 1.4rem;
+    }
+  
+    #gallery p {
+      font-size: 0.9rem;
+    }
+  
+    #gallery img {
+      border-radius: 5px;
+    }
+  
+    #gallery .gallery-btn {
+      padding: 8px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
